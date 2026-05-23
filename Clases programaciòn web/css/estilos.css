@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: skyblue;
+    color: wheat;
+    padding: 20px;
+}
+
+fieldset {
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 50px black;
+    border-radius: 8px;
+    background-color: darkblue;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d4e6f1;
+    /* Azul pastel claro */
+    border: 1px solid #a9cce3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a9cce3;
+}
+
+/* Realce visual estético para los bloques de resultados */
+.alerta-resultado {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #f2f4f4;
+    border: 1px solid #d5dbdb;
+    font-weight: bold;
+}
+
+.destaque-pastel {
+    background-color: #d5f5e3;
+    /* Verde pastel claro para el sorteo */
+    border: 1px solid #abebc6;
+}
