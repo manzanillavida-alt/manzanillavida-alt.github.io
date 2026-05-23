@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafío Simuladores</title>
+    <link rel="stylesheet" href="css\estilos.css">
+</head>
+
+<body>
+
+    <h1>Desafío Técnico: Simuladores Web</h1>
+
+    <fieldset>
+        <legend>1. Simulador de Transferencia de Calor</legend>
+        <form onsubmit="return false;">
+            <label>Temperatura Inicial (T0):</label>
+            <input type="number" id="t0" value="120" required><br><br>
+
+            <label>Temperatura Entorno (Ts):</label>
+            <input type="number" id="ts" value="38" required><br><br>
+
+            <label>Constante (k):</label>
+            <input type="number" id="k" value="0.45" step="any" required><br><br>
+
+            <label>Tiempo en horas (t):</label>
+            <input type="number" id="t" value="3" required><br><br>
+
+            <button type="button" onclick="calcularCalor()">Calcular Temperatura</button>
+        </form>
+
+        <div id="resultado-calor" class="alerta-resultado">
+            Resultado: --
+        </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>2. Calculador de Combinaciones Complejas</legend>
+        <form onsubmit="return false;">
+            <h3>Grupo 1</h3>
+            <label>n1:</label>
+            <input type="number" id="n1" value="59" required>
+            <label>r1:</label>
+            <input type="number" id="r1" value="5" required><br><br>
+
+            <h3>Grupo 2</h3>
+            <label>n2:</label>
+            <input type="number" id="n2" value="35" required>
+            <label>r2:</label>
+            <input type="number" id="r2" value="1" required><br><br>
+
+            <button type="button" onclick="calcularCombinacionesTotales()">Calcular Sorteo</button>
+        </form>
+
+        <div id="resultado-comb" class="alerta-resultado destaque-pastel">
+            Total Combinaciones: --
+        </div>
+    </fieldset>
+
+    <script src="javascript\hola.js"></script>
+</body>
+
+</html>
