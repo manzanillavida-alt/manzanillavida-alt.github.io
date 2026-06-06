@@ -1,0 +1,256 @@
+/* Paleta de Colores Sobrios e Inicialización */
+:root {
+    --bg-principal: #f4f6f8;
+    --texto-oscuro: #2c3e50;
+    --azul-sobrio: #1e272e;
+    --gris-tarjeta: #ffffff;
+    --borde-suave: #dcdde1;
+    --color-normal: #27ae60;
+    --color-alerta: #e67e22;
+    --color-critico: #c0392b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--azul-sobrio);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #b2bec3;
+}
+
+nav {
+    background-color: #2f3640;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #f5f6fa;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #718093;
+}
+
+/* Layout y Contenedor Principal */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: var(--gris-tarjeta);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    border-bottom: 2px solid var(--borde-suave);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--azul-sobrio);
+    font-size: 1.4rem;
+}
+
+/* Formularios */
+.descripcion-sim {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--borde-suave);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    color: var(--texto-oscuro);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--azul-sobrio);
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button {
+    background-color: var(--azul-sobrio);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #353b48;
+}
+
+.btn-clear {
+    background-color: #7f8c8d;
+}
+
+.btn-clear:hover {
+    background-color: #95a5a6;
+}
+
+/* Bloques de Resultados Dinámicos */
+.resultado-box {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 5px solid var(--azul-sobrio);
+    background-color: #f8f9fa;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Clases de Estado Controladas por JS */
+.estado-normal {
+    border-left-color: var(--color-normal);
+    background-color: #ebf7ee;
+}
+
+.estado-alerta {
+    border-left-color: var(--color-alerta);
+    background-color: #fdf3e7;
+}
+
+.estado-critico {
+    border-left-color: var(--color-critico);
+    background-color: #fdedec;
+}
+
+/* Tablas y Casos de estudio */
+.tablas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.tabla-wrapper h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #57606f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+table th,
+table td {
+    border: 1px solid var(--borde-suave);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #f1f2f6;
+    color: var(--texto-oscuro);
+}
+
+/* Footer */
+footer {
+    background-color: var(--azul-sobrio);
+    color: #95a5a6;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+/* Responsive - Media Queries */
+@media (max-width: 768px) {
+    .tablas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 0.75rem 1rem;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+}
